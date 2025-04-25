@@ -20,10 +20,10 @@ function Tasks(props) {
             <li key={task.id} className="flex gap-2" >
               <button 
                 onClick={() => props.onTaskClick(task.id)} 
-                className={`bg-slate-400 text-left text-white p-2 w-full rounded-md ${task.isCompleted && "line-through" }` }>
-                {task.title}
-                {/* task.isCompleted ? <span className="text-green-500"> ✔️</span> : <span > </span> */ }
-               </button>
+                className="bg-slate-400 text-left text-white p-2 w-full rounded-md">
+                {task.isCompleted ? <span className="text-green-500"> ✔️</span> : <span > </span> }
+                {task.title}                 
+              </button>
               <Button onClick={() => {onSeeTaskClick(task)}} ><ChevronRightIcon /></Button>   
               <Button onClick={()=> props.onDeleteTaskClick(task.id)} ><TrashIcon /></Button>
             </li>
